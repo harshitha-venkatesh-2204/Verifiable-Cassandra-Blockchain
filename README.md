@@ -1,10 +1,10 @@
-# Blockchain-Assisted Verifiable Cassandra
+# Blockchain-Assisted Verifiable Cassandra  🛡️📊
 
-## Introduction
+## Introduction  🌐
 
 Outsourced Database Model (ODB) is a paradigm in cloud computing where data owners (DOs) delegate their data to a database service provider (SP) for efficient cloud services. However, the untrusted nature of SPs poses risks to data integrity. To address this, we propose a solution using Merkle Trees (MHT) and the Ethereum blockchain to authenticate queried data from SP. This proof-of-concept implementation demonstrates how the system ensures data consistency and detects alterations.
 
-## Implementation Overview
+## Implementation Overview 🛠️
 
 - **Data Owner (DO)**: Prepares key-value dataset and constructs a Merkle Hash Tree (MHT) over the data.
 - **Database Service Provider (SP)**: Stores data in a Cassandra database.
@@ -12,7 +12,7 @@ Outsourced Database Model (ODB) is a paradigm in cloud computing where data owne
 - **Query Client (C)**: Issues key-value queries and verifies results using MHT.
 - **Verification Results**: Detects tampered data in the case of an attack.
 
-## Setup Instructions
+## Setup Instructions ⚙️
 
 ### Install pip3 for package management
 
@@ -22,14 +22,14 @@ sudo apt-get install python3-pip
 python3 -m pip install -U pip
 ```
 
-Install related packages
+Install related packages 📦
 
 ```bash
 pip3 install cassandra-driver merkletools py-solc-x
 pip3 install web3==5.31.4
 ```
 
-## Project setup
+## Project setup 🗂️
 
 1. Create a directory and upload the necessary files:
 
@@ -66,7 +66,7 @@ ganache
 ```
 
 
-Start the Cassandra Service
+Start the Cassandra Service 🗄️
 
 Open a third terminal: Install Cassandra
 
@@ -77,7 +77,7 @@ sudo service cassandra stop
 sudo service cassandra start
 ```
 
-Running the Program
+Running the Program ▶️
 
 In the first terminal, navigate to the project folder:
 
@@ -92,12 +92,12 @@ python3 driver.py
 ```
 
 
-## Verification Scenarios
+## Verification Scenarios 🔍
 
 - No Attack Scenario: Data is verified as untampered when the Merkle tree root matches the blockchain-stored root.
 - Attack Scenario: Tampered data is detected when verification fails, demonstrating unauthorized modifications.
 
   
-## Conclusion
+## Conclusion 🎓
 
 This project showcases how Merkle Trees and Ethereum blockchain can be leveraged to authenticate queries and ensure data integrity in an outsourced database model. The solution effectively identifies unauthorized changes, enhancing security in cloud environments
